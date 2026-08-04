@@ -7,11 +7,6 @@
     </div>
 
     <div class="col-sm-5">
-        <div class="user-area dropdown float-right">
-            <x-app-layout>
-                
-            </x-app-layout>
-        </div>
 
         <!-- for notification  starts-->
             <div class="user-area dropdown float-right notification-icon" id="toggleBtn">
