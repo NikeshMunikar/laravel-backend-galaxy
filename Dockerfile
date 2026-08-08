@@ -48,4 +48,4 @@ EXPOSE 8080
 # only exist once the container is actually running — caching them
 # earlier would bake in missing/placeholder values. Then start Laravel
 # bound to 0.0.0.0 on Render's assigned $PORT.
-CMD php artisan config:cache && php artisan serve --host=0.0.0.0 --port=$PORT
+CMD php artisan migrate --force && php artisan config:cache && php artisan serve --host=0.0.0.0 --port=$PORT
