@@ -1,0 +1,21 @@
+# Secrets — never baked into the image; Render injects real env vars at runtime
+.env
+.env.*
+!.env.example
+
+# Version control
+.git
+.gitignore
+
+# Dependencies — reinstalled inside the image, not copied from the host
+vendor
+node_modules
+
+# Editor/OS noise
+.vscode
+.idea
+.DS_Store
+
+# Laravel logs and generated caches — regenerated at runtime, not needed in the build context
+storage/logs/*.log
+bootstrap/cache/*.php
