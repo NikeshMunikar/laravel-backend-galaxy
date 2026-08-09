@@ -5,19 +5,17 @@ FROM node:18 AS frontend
 
 WORKDIR /app
 
-# Copy package files first for better Docker layer caching
 COPY package*.json ./
 
 RUN npm ci
 
-# Copy the files required by Vite
 COPY resources ./resources
 COPY vite.config.js ./
+COPY tailwind.config.js ./
+COPY postcss.config.js ./
 COPY public ./public
 
-# Build production CSS/JS
 RUN npm run build
-
 
 # ============================================================
 # Stage 2: Laravel application
