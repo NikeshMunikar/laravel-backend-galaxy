@@ -1,4 +1,3 @@
-```dockerfile
 # ============================================================
 # Stage 1: Build Vite frontend assets
 # ============================================================
@@ -77,4 +76,4 @@ EXPOSE 8080
 CMD php artisan migrate --force && \
     php artisan config:cache && \
     php artisan serve --host=0.0.0.0 --port=$PORT
-```
+
